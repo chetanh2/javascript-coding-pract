@@ -13,6 +13,20 @@ function areAnagrams(word1, word2) {
 
   return sortedWord1 === sortedWord2;
 }
+// solution 1: SORTING
+function isAnagram(str1, str2) {
+  // Normalize the strings by removing all whitespace and converting to lowercase
+  const normalize = (str) => str.replaceAll(/s+/g, "").toLowerCase();
+  const newStr1 = normalize(str1);
+  const newStr2 = normalize(str2);
+  if (newStr1.length !== newStr2.length) return false;
+  const anagram =
+    newStr1.split("").sort().join("") === newStr2.split("").sort().join("");
+  return anagram;
+};
+
+
+console.log('testing', anagramPractice("listen", "silent"));
 // console.log(areAnagrams("listen", "silent")); // true
 // console.log(areAnagrams("listen", "silence")); // false
 
@@ -28,22 +42,13 @@ function areAnagrams(word1, word2) {
 //? Without built in function
 function areAnagramstttttt(word1, word2) {
     if (word1.length !== word2.length) return false;
-  
     function sortString(str) {
       let arr = str.split("");
       console.log("arr.......",arr);
-      
-      // Bubble sort algorithm
-      // 1. Iterate through the array and compare adjacent elements
-      // 2. If the current element is greater than the next element, swap them
-      // 3. Repeat step 2 until the array is sorted
-      // The outer loop will iterate through the array (n times), and the inner loop will iterate through the remaining elements (n-1 times)
-      // The algorithm will make (n-1) + (n-2) + ... + 1 = n*(n-1)/2 comparisons
       for (let i = 0; i < arr.length - 1; i++) {
         for (let j = i + 1; j < arr.length; j++) {
           if (arr[i] > arr[j]) {
             // Swap elements
-            // Create a temporary variable to hold the value of the current element
             let temp = arr[i];
             // Assign the value of the next element to the current element
             arr[i] = arr[j];
