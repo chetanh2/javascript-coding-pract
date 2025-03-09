@@ -1,0 +1,27 @@
+<script>
+// 1
+// let a = []
+// let b = []
+// console.warn(a == b);
+// console.warn(a === b);
+
+// ans is false, because whenever we compare 2 array then it compares memory location of array , and memory loc is always different
+</script>
+<script>
+    // 2
+    // let c = []
+    // let d = c
+    // console.warn(c == d);
+    // console.warn(c === d);
+    
+    // ans is true, because memory location of both c and d is same
+</script>
+<script>
+    // 3
+    let a = [20]
+    let b = [20]
+    console.warn(a[0] == b[0]);
+    console.warn(a[0] === b[0]);
+    
+    // ans is true, because here it is comparing value of that element , if it was blank array then it would compare memory location
+</script>
