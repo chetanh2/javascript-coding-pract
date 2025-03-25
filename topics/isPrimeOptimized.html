@@ -1,0 +1,46 @@
+<script >
+    const isPrimeOptinzed = (numberrray) => {
+
+    // Create two empty arrays to store the prime and composite numbers
+    const primeNumber = [];
+    const compositeNumber = [];
+
+    // Loop through each number in the input array
+    for(let num of numberrray){
+
+        // Initialize a counter to keep track of the number of divisors
+        let count = 0;
+
+        // Loop through each number from 2 to the square root of the current number
+        // Example: The square root of 10 is 3.1622776601683795,
+        // so the loop will run from 2 to 3.
+        for(let i = 2; i <= Math.sqrt(num); i++){
+            // Example: if the current number is 7, and the loop number is 2,
+            // then 7 is not divisible by 2, so the counter will remain 0.
+            // Example: if the current number is 10, and the loop number is 2,
+            // then 10 is divisible by 2, so the counter will be incremented to 1.
+            if(num % i == 0){
+                count++
+            }
+        }
+
+        // If the counter is still zero, the number is prime, so add it to the primeNumber array
+        if(count == 0){
+            primeNumber.push(num)
+        }else{
+            // Otherwise, add it to the compositeNumber array
+            compositeNumber.push(num)
+        }
+
+    }
+
+    // Return an object with the two arrays
+    return {
+        primeNumber,compositeNumber
+    }
+
+    }
+
+
+    console.log(isPrimeOptinzed([2,3,4,5,6,7,8,10]))
+</script>
