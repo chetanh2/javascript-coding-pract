@@ -71,7 +71,7 @@ console.log(findMax([1, 2, 3, 4, 5])); // Output: 5
 // console.log(findMax([1, 2, 3, 4, 5]));
 
 function findmax(arr) {
-  let max = arr;
+  let max = arr[0];
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > max) {
       max = arr[i];
@@ -80,7 +80,7 @@ function findmax(arr) {
   return max;
 }
 console.log(
-  findMax([1, 2, 3, 4, 15, 45, 34, 12, 56, 34, 23, 23, 23, 67, 89, 676])
+  findmax([1, 2, 3, 4, 15, 45, 34, 12, 56, 34, 23, 23, 23, 67, 89, 676])
 );
 // Initialization: Start by assuming the first element of the array is the largest (max = arr[0]).
 // Loop through the array: Use a for loop to iterate through the array, starting from the second element (i = 1).
