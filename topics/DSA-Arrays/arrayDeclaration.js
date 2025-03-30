@@ -66,24 +66,30 @@ const sum = numbers.reduce((prev,item)=>{
 
 //? some in js
 const res = numbers.some((item)=> item > 3)
-// console.log(res);
+// console.log(res);  // this will return either true or false
 
 // ? every in js
 const res1 = numbers.every((item)=> item > 3)
-// console.log(res1);
+// console.log(res1); // it will check every single element if every element is greater than 3 than it will print true
 
 //? find in js 
 const res2 = numbers.find((item)=> item > 3)
-// console.log(res2);
+// console.log(res2); // it will return the first element which it finds & meets the condition , if there is no item which is greater than 3 then it will return us undefined
 
 // ! Spread & rest Operators
 // ? spread
 const arr1 = [1,2,3]
 const arr2 = [4,5,6]
 const arr3 = [...arr1,...arr2]  //? spread
-console.log(arr3);
+// console.log(arr3);
 
 // ? rest
-const arr4 = [1,2,3,4,5,6]
+// const arr4 = [1,2,3,4,5,6]
 // const [a,b,...arr5] = arr4 //? rest
-// console.log(arr5);
+function sumRest(...numbers){
+    return numbers
+}
+// console.log(sumRest(arr1,arr2));
+
+// ! concat
+arr1.concat
