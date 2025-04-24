@@ -5,17 +5,16 @@ const numbers = [1, 2, 3, 4, 5];
 
 const multiplyThree = numbers.map((num, index, array) => {
   console.log(index);
-
   return num * 3 + index;
 });
 
-console.log(multiplyThree);
+console.log("multiplyThree", multiplyThree);
 
 //? filter in js // filter takes condition
 const moreThanThree = numbers.filter((item, index, array) => {
   return item > 3;
 });
-console.log(moreThanThree);
+console.log("moreThanThree", moreThanThree);
 
 //? Reduce method // reduce method reduces the value of an array down to just one value
 // ? reduce takes an array & reduces its value down to one value
